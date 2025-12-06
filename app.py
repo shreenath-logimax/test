@@ -1,15 +1,15 @@
 # app.py
 from selenium import webdriver
-from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.by import By
-from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
 from time import sleep
 
 class Test_Estimation:
 
   
     def booting_function(self):
-        self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
+        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
         self.driver.get("https://retail.logimaxindia.com/test_etail_v3/admin/index.php/admin/login")
         self.driver.maximize_window()
         self.driver.implicitly_wait(5)
@@ -23,4 +23,5 @@ class Test_Estimation:
 
 test = Test_Estimation()
 test.booting_function()       
+
 test.test_Estimation(test)  
