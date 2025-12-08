@@ -20,8 +20,10 @@ class Test_Estimation:
         self.driver.find_element(By.NAME, "password").send_keys("Dev#source@etail")
         sleep(3)
         self.driver.find_element(By.XPATH, '//button[@id="submit_login"]').click()
+        print("Login was Successfully")
 
 test = Test_Estimation()
 test.booting_function()       
 
 test.test_Estimation(test)  
+
